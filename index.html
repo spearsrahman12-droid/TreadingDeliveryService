@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treading Delivery Services</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0d;
+  color: white;
+}
+header {
+  text-align: center;
+  padding: 25px 15px;
+  border-bottom: 3px solid #7b2cbf;
+}
+.logo {
+  color: #a855f7;
+  font-size: 28px;
+  font-weight: bold;
+}
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg,#090909,#301044);
+}
+.hero h1 {
+  font-size: 40px;
+}
+.purple {
+  color: #c084fc;
+}
+.btn {
+  display: inline-block;
+  padding: 16px 22px;
+  margin: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.call {
+  background: #7b2cbf;
+  color: white;
+}
+.text {
+  background: white;
+  color: black;
+}
+section {
+  max-width: 850px;
+  margin: auto;
+  padding: 40px 20px;
+}
+.card {
+  background: #18181b;
+  padding: 18px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  margin: 7px 0;
+  border: 0;
+  border-radius: 6px;
+  font-size: 16px;
+}
+button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 10px;
+  background: #7b2cbf;
+  color: white;
+  border: 0;
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #050505;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">TREADING DELIVERY SERVICES</div>
+<p>We Hit The Ground Running</p>
+</header>
+
+<div class="hero">
+<h1>WHEN THE PARTS CAN'T WAIT,<br><span class="purple">WE DELIVER.</span></h1>
+
+<p>
+Emergency parts delivery serving<br>
+Batavia • Eastgate • Amelia • Milford
+</p>
+
+<a class="btn call" href="tel:5138144680">CALL NOW</a>
+<a class="btn text" href="sms:5138144680">TEXT NOW</a>
+</div>
+
+<section>
+<h2 class="purple">Emergency Parts Delivery</h2>
+
+<p>
+When downtime isn't an option, Treading Delivery Services helps get the parts you need where they need to go.
+</p>
+
+<div class="card">🚗 Automotive Parts</div>
+<div class="card">❄️ HVAC Parts</div>
+<div class="card">🔧 Plumbing Parts</div>
+<div class="card">⚡ Electrical Parts</div>
+<div class="card">🏗️ Job-Site Deliveries</div>
+<div class="card">📦 Emergency Deliveries</div>
+</section>
+
+<section>
+<h2 class="purple">Request a Delivery</h2>
+
+<form id="delivery">
+<input id="name" placeholder="Name or company" required>
+<input id="phone" placeholder="Phone number" required>
+<input id="pickup" placeholder="Pickup address" required>
+<input id="dropoff" placeholder="Delivery address" required>
+<input id="part" placeholder="Part being delivered" required>
+<textarea id="notes" placeholder="Special instructions"></textarea>
+
+<button type="submit">REQUEST DELIVERY</button>
+</form>
+</section>
+
+<section>
+<h2 class="purple">Service Area</h2>
+<p>Batavia • Eastgate • Amelia • Milford, Ohio</p>
+
+<h2 class="purple">Need a Part Right Now?</h2>
+<p>Call or text <strong>513-814-4680</strong>.</p>
+
+<a class="btn call" href="tel:5138144680">513-814-4680</a>
+</section>
+
+<footer>
+<strong>Treading Delivery Services</strong><br>
+We Hit The Ground Running
+</footer>
+
+<script>
+document.getElementById("delivery").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  var msg =
+    "DELIVERY REQUEST\n\n" +
+    "Name: " + document.getElementById("name").value + "\n" +
+    "Phone: " + document.getElementById("phone").value + "\n" +
+    "Pickup: " + document.getElementById("pickup").value + "\n" +
+    "Drop-off: " + document.getElementById("dropoff").value + "\n" +
+    "Part: " + document.getElementById("part").value + "\n" +
+    "Notes: " + document.getElementById("notes").value;
+
+  window.location.href =
+    "sms:5138144680?body=" + encodeURIComponent(msg);
+});
+</script>
+
+</body>
+</html>
