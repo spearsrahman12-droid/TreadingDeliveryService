@@ -280,5 +280,28 @@ footer p {
   <p>Batavia • Eastgate • Amelia • Milford, OH</p>
 </footer>
 
+  <script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = this.elements["name"].value;
+  const pickup = this.elements["pickup"].value;
+  const delivery = this.elements["delivery"].value;
+  const details = this.elements["details"].value;
+  const phone = this.elements["phone"].value;
+
+  const message =
+    "DELIVERY QUOTE REQUEST\n\n" +
+    "Name: " + name + "\n" +
+    "Pickup: " + pickup + "\n" +
+    "Delivery: " + delivery + "\n" +
+    "Items: " + details + "\n" +
+    "Phone: " + phone;
+
+  window.location.href =
+    "sms:5138144680?body=" + encodeURIComponent(message);
+});
+  </script>
+
 </body>
 </html>
