@@ -286,6 +286,9 @@ form button {
     <p><strong>What Needs Delivered?</strong></p>
     <textarea name="details" placeholder="Describe the parts or items"></textarea>
 
+    <p><strong>Pickup Order / PO Number</strong></p>
+<input type="text" name="order" placeholder="Order or PO number">
+
     <p><strong>Your Phone Number</strong></p>
     <input type="tel" name="phone" placeholder="Phone number" required>
 
@@ -311,6 +314,7 @@ document.querySelector("form").addEventListener("submit", function(e) {
   const pickup = this.elements["pickup"].value;
   const delivery = this.elements["delivery"].value;
   const details = this.elements["details"].value;
+  const order = this.elements["order"].value;
   const phone = this.elements["phone"].value;
 
   const message =
@@ -319,6 +323,7 @@ document.querySelector("form").addEventListener("submit", function(e) {
     "Pickup: " + pickup + "\n" +
     "Delivery: " + delivery + "\n" +
     "Items: " + details + "\n" +
+    "Order / PO: " + order + "\n" +
     "Phone: " + phone;
 
   window.location.href =
